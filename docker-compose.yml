@@ -1,0 +1,27 @@
+version: '3.3'
+
+services:
+
+  pg-exemple:
+    image: bitnami/postgresql:latest
+    container_name: pg-exemple
+    tty: true
+    volumes:
+      - pgdata:/bitnami/postgresql
+    environment:
+      - POSTGRESQL_PASSWORD=docker
+      - POSTGRESQL_DATABASE=pg-exemple
+    ports:
+      - 5432:5432
+    networks:
+      - application
+    # restart: always
+
+volumes:
+  pgdata:
+  mongodata:
+  redisdata:
+
+networks:
+  application:
+    driver: bridge
