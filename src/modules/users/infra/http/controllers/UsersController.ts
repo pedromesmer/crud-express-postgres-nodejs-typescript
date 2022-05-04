@@ -25,7 +25,7 @@ class UsersController {
     return response.json(users);
   }
 
-  public async remove(request: Request, response: Response) {
+  public async delete(request: Request, response: Response) {
     const { id } = request.params;
 
     const removeUserService = container.resolve(RemoveUserService);
