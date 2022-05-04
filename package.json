@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "express": "^4.17.3",
+    "tsyringe": "^4.6.0",
     "typeorm": "^0.2.37"
   }
 }
